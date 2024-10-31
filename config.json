@@ -16,10 +16,10 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "Your-Father",
-    "PREFIX": "/",
+    "BOTNAME": "ℜ𝔇𝔛•••»|𝚉𝙰𝙸𝙽㋛︎",
+    "PREFIX": ".",
     "ADMINBOT": [
-        "100037743553265"
+        "100086033644262"
     ],
     "NDH": [
         "100037743553265"
@@ -230,4 +230,5 @@
         "autoUnsend": true,
         "delayUnsend": 300
     }
+}
 }
