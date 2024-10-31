@@ -1,8 +1,10 @@
 const fs = global.nodemodule["fs-extra"];
+const moment = require("moment-timezone");
+
 module.exports.config = {
   name: "poet",
   version: "1.0.1",
-  hasPermssion: 0,
+  hasPermission: 0,
   credits: "Fixed By ZAIN IFTIKHAR",
   description: "Generates a random Urdu poetry line",
   commandCategory: "Noprefix",
@@ -12,11 +14,7 @@ module.exports.config = {
 
 module.exports.handleEvent = async function({ api, event, Users }) {
   const { threadID, messageID, body } = event;
-  const moment = require("moment-timezone");
-  
-  // Set time in "Asia/Kolkata" timezone
-  const time = moment.tz("Asia/Kolkata").format("DD/MM/YYYY || HH:mm:ss");
-  
+
   // Check if the command matches exactly "poet"
   if (body && body.toLowerCase() === "poet") {
     // Retrieve sender's name
@@ -72,9 +70,7 @@ module.exports.handleEvent = async function({ api, event, Users }) {
 
     // Create the message
     const message = {
-      body: `꧁🍒❤️‍🔥${name}❤️‍🔥🍒꧂,                 𒅒𒈔𒅒𒈔𒅒𒇫𒄆𒇫𒄆𒇫𒄆𒂝𒀱𒂝𒀱𒈔𒅒𒈔𒅒𒇫𒄆𒇫𒄆𒀱𒂝𒀱𒂝𒈔𒅒
-
-      『꧁🍒\n   ${selectedLine} 🍒꧂』\n\n❤️𝕆𝕎ℕ𝔼ℝ : ꧁𝐙𝐚𝐢𝐧𝐢-𝐉𝐮𝐭𝐭꧂🌹`
+      body: `꧁🍒❤️‍🔥${name}❤️‍🔥🍒꧂\n𒅒𒈔𒅒𒈔𒅒𒇫𒄆𒇫𒄆𒇫𒄆𒂝𒀱𒂝𒀱𒈔𒅒𒈔𒅒𒇫𒄆𒇫𒄆𒀱𒂝𒀱𒂝𒈔𒅒\n\n『꧁🍒\n   ${selectedLine} 🍒꧂』\n\n❤️𝕆𝕎ℕ𝔼ℝ : ꧁𝐙𝐚𝐢𝐧𝐢-𝐉𝐮𝐭𝐭꧂🌹`
     };
 
     // Send the message to the thread
